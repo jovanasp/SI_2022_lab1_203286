@@ -1,5 +1,5 @@
-jajca
-mleko
-zejtin
-brashno
-voda
+jajca x 10
+mleko x 1
+zejtin x 2
+brashno x 1
+voda x 5
