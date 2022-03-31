@@ -1,0 +1,267 @@
+1.Линк: https://github.com/jovanasp
+
+2.Гo променив името на гранката main во master.
+
+3.Го именував репозиториумот во SI_2022_lab1_203286 и креирав README документ.
+
+4. Го клонирав репозиториумот со командата:
+$ git clone https://github.com/jovanasp/SI_2022_lab1_203286 , додека со командата $ cd SI_2022_lab1_203286 
+влегов во репозиториумот.
+
+5. Додадов текстуална датотека со 5 случајни производи со командата:$ git add shopping_list.txt
+ на која направив commit со командата: $ git commit -m "Add 5 items to the shopping list"
+
+6.Додадов количина и направив commit со командата:
+$ git commit -am "Add quantities to the items."
+
+7.Креирав две гранки со командите:
+$ git checkout -b branch1
+$ git checkout -b branch2
+
+8.
+============================================================================
+cwill@DESKTOP-U71K3KF MINGW64 ~
+$ git clone https://github.com/jovanasp/SI_2022_lab1_203286
+Cloning into 'SI_2022_lab1_203286'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+cwill@DESKTOP-U71K3KF MINGW64 ~
+$ cd SI_2022_lab1_203286
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git commit -am "Add 5 items to the shopping list"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        shopping_list.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git add shopping_list.txt
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master 5c53ec6] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git add shopping_list.txt
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git commit -m "Add quantities to the items."
+[master 647d6c6] Add quantities to the items.
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch1)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git log --oneline
+647d6c6 (HEAD -> branch2, master, branch1) Add quantities to the items.
+5c53ec6 Add 5 items to the shopping list
+8205dcf (origin/master, origin/HEAD) Update README.md
+8d3d7a3 Initial commit
+
+======================================================================
+
+9.Направив синхронизација со командите:
+$ git push origin master
+$ git push origin branch1
+$ git push origin branch2
+
+10.На гранката branch1 се префрлив со командата:
+$ git checkout branch1
+
+11.Ја сменив количината на петтата ставка и направив commit со командите:
+$ nano shopping_list.txt
+$ git commit -am "Change quantity of item #5"
+
+12.На гранката master се вратив со командата:
+$ git checkout master
+
+13.Ја сменив количината на втората ставка и направив commit со командите:
+$ nano shopping_list.txt
+$ git commit -am "Change quantity of item #2"
+
+14.Ги синхронизирав гранките со командите:
+$ git push origin master 
+$ git push origin branch1 
+$ git push origin branch2
+
+15.На гранката branch2 се префрлив со командата:
+$ git checkout branch2
+
+16.Го променив името на ставката број 4 во листата и направив commit со командите:
+$ git commit -am "Modify item #4"
+
+17.
+======================================================================
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git status
+On branch branch2
+nothing to commit, working tree clean
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 667 bytes | 667.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jovanasp/SI_2022_lab1_203286
+   8205dcf..647d6c6  master -> master
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git push origin branch1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/jovanasp/SI_2022_lab1_203286/pull/new/branch1
+remote:
+To https://github.com/jovanasp/SI_2022_lab1_203286
+ * [new branch]      branch1 -> branch1
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git push origin branch2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/jovanasp/SI_2022_lab1_203286/pull/new/branch2
+remote:
+To https://github.com/jovanasp/SI_2022_lab1_203286
+ * [new branch]      branch2 -> branch2
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch1)
+$ nano shopping_list.txt
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch1)
+$ git commit -am "Change quantity of item #5"
+[branch1 3694abf] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ nano shopping_list.txt
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git commit -am "Change quantity of item #2"
+[master c0fd598] Change quantity of item #2
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 357 bytes | 357.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jovanasp/SI_2022_lab1_203286
+   647d6c6..c0fd598  master -> master
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git push origin branch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jovanasp/SI_2022_lab1_203286
+   647d6c6..3694abf  branch1 -> branch1
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git push origin branch2
+Everything up-to-date
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git commit -am "Modify item #4"
+[branch2 91e9650] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git log --oneline
+91e9650 (HEAD -> branch2) Modify item #4
+647d6c6 (origin/branch2) Add quantities to the items.
+5c53ec6 Add 5 items to the shopping list
+8205dcf Update README.md
+8d3d7a3 Initial commit
+==================================================================================
+
+18.Додадов 6та ставка во shopping_list.txt со промена на последниот commit со командата:
+$ git commit --amend -am "Modify item #4 and add item #6"
+
+19.
+=================================================================================
+cwill@DESKTOP-U71K3KF MINGW64 ~/SI_2022_lab1_203286 (branch2)
+$ git commit --amend -am "Modify item #4 and add item #6"
+[branch2 596e263] Modify item #4 and add item #6
+ Date: Thu Mar 31 16:56:25 2022 +0200
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+====================================================================================
+
+20.Се префрлив на гранката мастер и ја споив гранката branch1 кон мастер со командите:
+$ git checkout master
+$ nano shopping_list.txt
+$ git add shopping_list.txt
+$ git merge branch1
+$ git commit -m "Merge branch1"
+
+21.Jа споив гранката branch2 кон мастер со командите:
+$ git commit -am "Merge branch2"
+$ git merge branch2
+$ nano shopping_list.txt
+$ git add shopping_list.txt
+$ git commit -m "Merge branch2"
+$ git merge branch2
+
+22.Ја додадов текстуалната датотека со командата:
+$ git commit -am "Add docs"
+
+23.Ги синхронизирав гранките со командите:
+$ git push origin master 
+$ git push origin branch1 
+$ git push origin branch2
+
+
+
+
+
+
+
+ 
+
