@@ -3,3 +3,6 @@ mleko x 2
 zejtin x 2
 brashno x 1
 voda x 5
+maslinki x 1
+
+
